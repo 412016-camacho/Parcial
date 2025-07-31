@@ -1,0 +1,22 @@
+<div class="bg-white rounded-lg shadow overflow-hidden mt-4">
+  <div class="overflow-x-auto">
+    <table class="min-w-full divide-y divide-gray-200">
+      <thead class="bg-gray-50">
+      <tr>
+        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Paciente</th>
+        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Médico</th>
+        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Fecha</th>
+      </tr>
+      </thead>
+      <tbody class="bg-white divide-y divide-gray-200">
+              @for (t of turnos; track $index) {
+                <tr>
+                <td class="px-6 py-4 text-sm text-gray-700">{{t.paciente.nombreCompleto}}</td>
+                <td class="px-6 py-4 text-sm text-gray-700">{{t.medico.nombreCompleto}}</td>
+                <td class="px-6 py-4 text-sm text-gray-700">{{t.fecha}}</td>
+                </tr>
+              }
+      </tbody>
+    </table>
+  </div>
+</div>
